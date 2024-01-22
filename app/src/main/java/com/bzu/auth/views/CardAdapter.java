@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.amdelamar.jotp.OTP;
@@ -11,6 +12,7 @@ import com.amdelamar.jotp.type.Type;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bzu.auth.Data.Database;
 import com.bzu.auth.R;
 import com.bzu.auth.model.AuthInfo;
 
@@ -60,7 +62,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardView> {
                 handler.postDelayed(this, 300); // 30 seconds in milliseconds
             }
         };
-
         // Start the initial update
         handler.post(updateRunnable);
 
