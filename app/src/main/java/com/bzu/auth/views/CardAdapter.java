@@ -59,7 +59,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardView> {
                 }
                 notifyDataSetChanged();
                 // Schedule the next update after 30 seconds
-                handler.postDelayed(this, 300); // 30 seconds in milliseconds
+                handler.postDelayed(this, 1); // 30 seconds in milliseconds
             }
         };
         // Start the initial update

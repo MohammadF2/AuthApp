@@ -52,6 +52,7 @@ public class MainScreen extends AppCompatActivity {
 
 
         Query query = Database.database.collection("secretKeys").whereEqualTo("email", Database.auth.getCurrentUser().getEmail());
+        // Select from secretKeys where email= 'faraj4497@gmail.com';
 
         query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
@@ -69,8 +70,6 @@ public class MainScreen extends AppCompatActivity {
                 Log.e("FirestoreQuery", "Error getting documents: " + e.getMessage());
             }
         });
-
-        data.add(new AuthInfo("test", "H4MDVD2CI5TKQI75"));
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

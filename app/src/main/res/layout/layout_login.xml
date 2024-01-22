@@ -66,9 +66,9 @@
         <Button
             android:id="@+id/cirLoginButton"
             style="@style/loginButton"
-            android:text="Login"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="Login" />
 
         <TextView
             style="@style/parent"
