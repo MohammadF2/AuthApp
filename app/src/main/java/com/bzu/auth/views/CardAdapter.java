@@ -68,11 +68,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardView> {
 
     private void updateData(int position) throws IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidKeyException {
 
-        String hexTime = OTP.timeInHex(System.currentTimeMillis() + 30000, 30);
+        String hexTime = OTP.timeInHex(System.currentTimeMillis() + 60000, 30);
         String newValue = OTP.create(data.get(position).getSecretKey(), hexTime, 6, Type.TOTP);
 
 
-        String hexTime2 = OTP.timeInHex(System.currentTimeMillis() + 60000, 30);
+        String hexTime2 = OTP.timeInHex(System.currentTimeMillis() + 90000, 30);
         String newValue2 = OTP.create(data.get(position).getSecretKey(), hexTime2, 6, Type.TOTP);
 
         data.get(position).setNextCode(newValue2);
